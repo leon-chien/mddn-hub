@@ -1,0 +1,20 @@
+{
+  "package": {
+    "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "bytes": 0,
+    "source": "download.yaml",
+    "notes": "Demo placeholder checksum."
+  },
+  "coordinates": {
+    "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "bytes": 0,
+    "source": "download.yaml",
+    "notes": "Demo placeholder checksum."
+  },
+  "topology": {
+    "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "bytes": 0,
+    "source": "download.yaml",
+    "notes": "Demo placeholder checksum."
+  }
+}

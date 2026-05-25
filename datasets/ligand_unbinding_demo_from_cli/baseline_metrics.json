@@ -1,0 +1,22 @@
+{
+  "metric_type": "descriptive_dataset_metrics",
+  "events": {
+    "ligand_unbinding": {
+      "horizon_frames": 2,
+      "frame_count": 5,
+      "event_now_positive_count": 2,
+      "event_now_positive_rate": 0.4,
+      "valid_future_frame_count": 3,
+      "valid_future_positive_count": 2,
+      "valid_future_positive_rate": 0.6666666666666666,
+      "event_segment_count": 1,
+      "average_event_duration_frames": 2.0,
+      "transition_count": 1,
+      "transition_rate_per_1k_frames": 200.0,
+      "finite_time_to_event_count": 5,
+      "mean_observed_time_to_event_frames": 1.2,
+      "median_observed_time_to_event_frames": 1.0,
+      "metric_note": "Descriptive dataset metrics; not model baseline performance."
+    }
+  }
+}

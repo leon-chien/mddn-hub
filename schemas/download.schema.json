@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "download.schema.json",
+  "title": "MDDataNet Hub download locations",
+  "type": "object",
+  "additionalProperties": {
+    "$ref": "#/$defs/download_asset"
+  },
+  "minProperties": 1,
+  "$defs": {
+    "download_asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https?://"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-fA-F0-9]{64}$"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "provider": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "url",
+        "sha256"
+      ]
+    }
+  }
+}

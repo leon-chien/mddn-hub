@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "task.schema.json",
+  "title": "MDDataNet Hub task ontology",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "task_type": {
+      "type": "string",
+      "enum": [
+        "future_event_prediction",
+        "transition_detection",
+        "state_classification",
+        "trajectory_forecasting",
+        "interaction_prediction"
+      ]
+    },
+    "target_event": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+    },
+    "horizon_frames": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "input_type": {
+      "type": "string",
+      "enum": [
+        "trajectory_window",
+        "frame",
+        "state_features",
+        "interaction_features",
+        "sequence_of_frames"
+      ]
+    },
+    "label_type": {
+      "type": "string"
+    },
+    "extensions": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "task_type",
+    "target_event",
+    "input_type"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "task_type": {
+            "const": "future_event_prediction"
+          }
+        },
+        "required": [
+          "task_type"
+        ]
+      },
+      "then": {
+        "required": [
+          "horizon_frames"
+        ]
+      }
+    }
+  ]
+}

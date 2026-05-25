@@ -1,0 +1,9 @@
+{
+  "label_name": "ligand_unbinding_future_500",
+  "label_type": "binary_event_within_horizon",
+  "num_examples": 12000,
+  "num_positive": 1800,
+  "num_negative": 10200,
+  "positive_fraction": 0.15,
+  "notes": "Illustrative demo statistics only."
+}

@@ -1,0 +1,18 @@
+package:
+  url: "https://example.org/mddatanet/ligand_unbinding_demo/ligand_unbinding_demo.mddatanet.zip"
+  sha256: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  bytes: 0
+  provider: "example"
+  notes: "Demo placeholder URL; not a production MDDataNet asset."
+coordinates:
+  url: "https://example.org/mddatanet/ligand_unbinding_demo/coordinates.zarr.zip"
+  sha256: "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  bytes: 0
+  provider: "example"
+  notes: "Demo placeholder URL; not a production MDDataNet asset."
+topology:
+  url: "https://example.org/mddatanet/ligand_unbinding_demo/topology.pdb"
+  sha256: "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+  bytes: 0
+  provider: "example"
+  notes: "Demo placeholder URL; not a production MDDataNet asset."

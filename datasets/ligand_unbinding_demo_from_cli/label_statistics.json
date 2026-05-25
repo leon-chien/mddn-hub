@@ -1,0 +1,8 @@
+{
+  "ligand_unbinding": {
+    "event_now_positive_rate": 0.4,
+    "valid_future_positive_rate": 0.6666666666666666,
+    "valid_future_frame_count": 3,
+    "horizon_frames": 2
+  }
+}

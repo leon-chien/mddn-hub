@@ -1,0 +1,117 @@
+{
+  "manifest_version": "0.1.0",
+  "package_version": "0.1.0",
+  "schema_version": "0.1.0",
+  "data_format": "mddatanet_zip",
+  "storage_profile": "compressed",
+  "paths": {
+    "root": "/",
+    "trajectories": "dataset.zarr/trajectory/",
+    "coordinates": "dataset.zarr/trajectory/positions",
+    "features": "dataset.zarr/features/",
+    "labels": "dataset.zarr/labels/",
+    "splits": "dataset.zarr/splits/",
+    "topology": "dataset.zarr/topology/",
+    "metadata": "metadata.json"
+  },
+  "arrays": {
+    "coordinates": {
+      "path": "dataset.zarr/trajectory/positions",
+      "dtype": "float32",
+      "shape": [
+        5,
+        5,
+        3
+      ],
+      "description": "Trajectory coordinate tensor."
+    },
+    "frame_indices": {
+      "path": "dataset.zarr/trajectory/frame_indices",
+      "dtype": "int64",
+      "shape": [
+        5
+      ],
+      "description": "Global package frame indices."
+    },
+    "source_frame_indices": {
+      "path": "dataset.zarr/trajectory/source_frame_indices",
+      "dtype": "int64",
+      "shape": [
+        5
+      ],
+      "description": "Frame indices in the original source trajectory."
+    },
+    "run_ids": {
+      "path": "dataset.zarr/trajectory/run_ids",
+      "dtype": "string",
+      "shape": [
+        5
+      ],
+      "description": "Run identity for leakage-safe splits."
+    },
+    "feature_ligand_pocket_min_distance": {
+      "path": "dataset.zarr/features/ligand_pocket_min_distance",
+      "shape": [
+        5
+      ],
+      "description": "Derived feature: min_distance."
+    },
+    "label_ligand_unbinding_event_now": {
+      "path": "dataset.zarr/labels/ligand_unbinding/event_now",
+      "dtype": "bool",
+      "shape": [
+        5
+      ],
+      "description": "Current-frame event label."
+    },
+    "label_ligand_unbinding_future_2": {
+      "path": "dataset.zarr/labels/ligand_unbinding/event_future_2",
+      "dtype": "bool",
+      "shape": [
+        5
+      ],
+      "description": "Fixed-horizon future-event label."
+    },
+    "label_ligand_unbinding_future_2_valid": {
+      "path": "dataset.zarr/labels/ligand_unbinding/event_future_2_valid",
+      "dtype": "bool",
+      "shape": [
+        5
+      ],
+      "description": "True where the full future horizon exists."
+    },
+    "split_train": {
+      "path": "dataset.zarr/splits/train",
+      "dtype": "int64",
+      "shape": [
+        3
+      ],
+      "description": "train split frame indices."
+    },
+    "split_val": {
+      "path": "dataset.zarr/splits/val",
+      "dtype": "int64",
+      "shape": [
+        1
+      ],
+      "description": "val split frame indices."
+    },
+    "split_test": {
+      "path": "dataset.zarr/splits/test",
+      "dtype": "int64",
+      "shape": [
+        1
+      ],
+      "description": "test split frame indices."
+    }
+  },
+  "extensions": {
+    "mddatanet_version": "0.1.0",
+    "source_format_version": "1.0",
+    "package": {
+      "filename": "ligand_unbinding_demo.mddatanet.zip",
+      "sha256": "085d027044eaa509730a4f6753112d6effc732ea0ec6ae24221aaa1ebc604eaa",
+      "size_bytes": 31414
+    }
+  }
+}

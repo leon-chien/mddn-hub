@@ -1,0 +1,8 @@
+{
+  "package": {
+    "sha256": "085d027044eaa509730a4f6753112d6effc732ea0ec6ae24221aaa1ebc604eaa",
+    "bytes": 31414,
+    "source": "download.yaml",
+    "notes": "Placeholder URL. Upload package to Hugging Face, Zenodo, S3/R2, GCS, or institutional storage."
+  }
+}

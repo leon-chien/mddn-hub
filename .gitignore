@@ -216,3 +216,25 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# MDDataNet large/generated artifacts
+*.mddatanet.zip
+*.zarr.zip
+*.xtc
+*.dcd
+*.trr
+*.nc
+*.h5
+*.hdf5
+*.pdb.gz
+*.cif.gz
+*.gro.gz
+*.top.gz
+*.tpr
+*.edr
+*.xvg
+*.log
+*.zarr/
+downloads/
+local_data/
+validation_cache/

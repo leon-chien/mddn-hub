@@ -1,0 +1,7 @@
+package:
+  url: https://example.org/mddatanet/ligand_unbinding_demo_from_cli/ligand_unbinding_demo.mddatanet.zip
+  sha256: 085d027044eaa509730a4f6753112d6effc732ea0ec6ae24221aaa1ebc604eaa
+  bytes: 31414
+  provider: example.org
+  notes: Placeholder URL. Upload package to Hugging Face, Zenodo, S3/R2, GCS, or institutional
+    storage.

@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1.0",
+  "datasets": [
+    {
+      "dataset_id": "ligand_unbinding_demo",
+      "version": "0.1.0",
+      "task_type": "future_event_prediction",
+      "target_event": "ligand_unbinding",
+      "horizon_frames": 500,
+      "system_type": "protein_ligand",
+      "storage_profile": "metadata_only",
+      "license": "CC-BY-4.0",
+      "package_url": "https://example.org/mddatanet/ligand_unbinding_demo/ligand_unbinding_demo.mddatanet.zip"
+    },
+    {
+      "dataset_id": "ligand_unbinding_demo_from_cli",
+      "version": "0.1.0",
+      "task_type": "future_event_prediction",
+      "target_event": "ligand_unbinding",
+      "horizon_frames": 2,
+      "system_type": "protein_ligand",
+      "storage_profile": "compressed",
+      "license": "unknown",
+      "package_url": "https://example.org/mddatanet/ligand_unbinding_demo_from_cli/ligand_unbinding_demo.mddatanet.zip"
+    }
+  ]
+}

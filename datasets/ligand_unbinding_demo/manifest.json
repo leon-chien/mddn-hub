@@ -1,0 +1,40 @@
+{
+  "manifest_version": "0.1.0",
+  "package_version": "0.1.0",
+  "schema_version": "0.1.0",
+  "data_format": "metadata_only",
+  "storage_profile": "metadata_only",
+  "paths": {
+    "root": "/",
+    "trajectories": "trajectories/",
+    "coordinates": "arrays/coordinates",
+    "features": "arrays/features",
+    "labels": "arrays/labels/ligand_unbinding_future_500",
+    "splits": "splits/trajectory_split.json",
+    "topology": "topology/topology.pdb",
+    "metadata": "metadata/metadata.json"
+  },
+  "arrays": {
+    "labels": {
+      "path": "arrays/labels/ligand_unbinding_future_500",
+      "dtype": "bool",
+      "shape": [
+        "num_examples"
+      ],
+      "description": "Binary operational future-event labels."
+    },
+    "features": {
+      "path": "arrays/features",
+      "dtype": "float32",
+      "shape": [
+        "num_examples",
+        "window_frames",
+        "num_features"
+      ],
+      "description": "Illustrative ML-ready input features."
+    }
+  },
+  "extensions": {
+    "production_status": "demo_only"
+  }
+}

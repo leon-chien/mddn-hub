@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "manifest.schema.json",
+  "title": "MDDataNet package manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "manifest_version": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:[-+][0-9A-Za-z.-]+)?$"
+    },
+    "package_version": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:[-+][0-9A-Za-z.-]+)?$"
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "data_format": {
+      "type": "string",
+      "enum": [
+        "mddatanet_zip",
+        "zarr",
+        "zarr_zip",
+        "directory",
+        "metadata_only"
+      ]
+    },
+    "storage_profile": {
+      "type": "string",
+      "enum": [
+        "metadata_only",
+        "compressed",
+        "external_coordinates",
+        "full_package_external"
+      ]
+    },
+    "paths": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "root": {
+          "type": "string"
+        },
+        "trajectories": {
+          "type": "string"
+        },
+        "coordinates": {
+          "type": "string"
+        },
+        "features": {
+          "type": "string"
+        },
+        "labels": {
+          "type": "string"
+        },
+        "splits": {
+          "type": "string"
+        },
+        "topology": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "string"
+        }
+      }
+    },
+    "arrays": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "dtype": {
+            "type": "string"
+          },
+          "shape": {
+            "type": "array",
+            "items": {
+              "type": [
+                "integer",
+                "string"
+              ]
+            }
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path"
+        ]
+      }
+    },
+    "extensions": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "manifest_version",
+    "package_version",
+    "data_format",
+    "storage_profile",
+    "paths"
+  ]
+}

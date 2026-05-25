@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "checksums.schema.json",
+  "title": "MDDataNet Hub checksums",
+  "type": "object",
+  "additionalProperties": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "sha256": {
+        "type": "string",
+        "pattern": "^[a-fA-F0-9]{64}$"
+      },
+      "bytes": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "source": {
+        "type": "string"
+      },
+      "notes": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "sha256"
+    ]
+  },
+  "minProperties": 1
+}
