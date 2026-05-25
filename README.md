@@ -81,6 +81,54 @@ dataset = MDDataNetDataset(
 )
 ```
 
+## Use The CLI With The Hub
+
+Install the CLI from the sibling project when working locally:
+
+```bash
+cd ../mddn-cli
+python -m pip install -e ".[dev]"
+```
+
+Create a demo package or a real package with the CLI, then validate it:
+
+```bash
+mddatanet demo --out-dir outputs
+mddatanet validate outputs/ligand_unbinding_demo.mddatanet.zip
+```
+
+Export Hub metadata after uploading the package to external storage. If the
+package is not uploaded yet, the CLI writes a schema-valid placeholder URL that
+can be replaced before review.
+
+```bash
+mddatanet export-manifest outputs/ligand_unbinding_demo.mddatanet.zip \
+  --out ligand_unbinding_demo_from_cli \
+  --dataset-id ligand_unbinding_demo_from_cli \
+  --download-url https://example.org/ligand_unbinding_demo.mddatanet.zip
+```
+
+Submit the exported metadata by copying the folder into
+`datasets/<dataset_name>/`, then validate the registry:
+
+```bash
+cp -R ligand_unbinding_demo_from_cli datasets/
+python scripts/validate_entry.py datasets/ligand_unbinding_demo_from_cli
+python scripts/validate_all.py
+python scripts/build_index.py
+python scripts/build_index.py --check
+```
+
+Users train by reading `download.yaml`, downloading and verifying the package,
+and loading it with `MDDataNetDataset`. See
+[docs/training_from_hub.md](docs/training_from_hub.md).
+
+To prove the local CLI and Hub work together end to end, run:
+
+```bash
+python scripts/e2e_cli_hub_demo.py
+```
+
 ## Repository Layout
 
 ```text
@@ -129,6 +177,7 @@ Install the validation dependencies, then run:
 python scripts/validate_entry.py datasets/ligand_unbinding_demo
 python scripts/validate_all.py
 python scripts/build_index.py --check
+python scripts/e2e_cli_hub_demo.py
 ```
 
 The same validation and index freshness checks run in GitHub Actions for pull

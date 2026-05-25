@@ -77,3 +77,15 @@ verify those assets before training coordinate-based models.
 The Hub entry remains metadata-first: it records where assets live, how to check
 them, and how to interpret the ML task. It does not run downloads, uploads,
 preprocessing jobs, or hosted training services.
+
+## Local Ecosystem Smoke Test
+
+Maintainers can verify the CLI-to-Hub-to-loader path locally:
+
+```bash
+python scripts/e2e_cli_hub_demo.py
+```
+
+This script uses the sibling CLI repository, creates a demo `.mddatanet.zip`,
+exports Hub metadata, validates a temporary Hub entry, builds a temporary index,
+and loads the package with `MDDataNetDataset`.
