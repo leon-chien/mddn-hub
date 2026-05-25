@@ -2,9 +2,10 @@
 
 MDDataNet Hub is a standardized registry and benchmark ecosystem for molecular
 dynamics trajectory-learning datasets. It is the metadata side of MDDataNet:
-the CLI creates `.mddatanet.zip` packages, contributors upload those packages to
-external storage, and the Hub records the metadata and download links needed to
-discover, validate, and train on them.
+the [MDDataNet CLI](https://github.com/leon-chien/mddn-cli) creates
+`.mddatanet.zip` packages, contributors upload those packages to external
+storage, and the Hub records the metadata and download links needed to discover,
+validate, and train on them.
 
 It is not a trajectory hosting platform. The Hub stores metadata, schemas, task
 semantics, validation rules, dataset cards, provenance, checksums,
